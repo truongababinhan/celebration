@@ -42,6 +42,11 @@ div#video iframe {
   height: 155px;
 }
 
+div#video img {
+  max-width: 255px;
+  height: 100%;
+}
+
 #people {
   position: absolute;
   bottom: 65px;

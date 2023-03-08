@@ -295,18 +295,20 @@ function reveal() {
   
   loop();
   
-  var w, h;
+  var w, h, r;
   if(window.innerWidth >= 1000) {
-    w = 295; h = 185;
+    w = 295; h = 185; r = 85;
   }
   else {
-    w = 255; h = 155;
+    w = 255; h = 155; r = 75;
   }
   
-  var ifrm = document.createElement("iframe");
-        ifrm.setAttribute("src", "https://www.youtube.com/embed/KDxJlW6cxRk?controls=0&loop=1&autoplay=1");
-        //ifrm.style.width = `${w}px`;
-        //ifrm.style.height = `${h}px`;
+  var ifrm = document.createElement("img");
+        ifrm.setAttribute("src", "https://scontent.fsgn3-1.fna.fbcdn.net/v/t1.6435-9/116721645_1775176482635338_8063475112873723088_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=rstNa0wOjXcAX9bUYAR&_nc_ht=scontent.fsgn3-1.fna&oh=00_AfA2kMFXhKJZp1xGgapQfm2UQs58MUn38tR6Pdy6a9LM1g&oe=642F6BCB");
+        ifrm.style.width = `auto`;
+        ifrm.style.height = `${h}px`;
         ifrm.style.border = 'none';
+				ifrm.style.position = 'relative';
+				ifrm.style.right = `${r}px`;
         document.querySelector('#video').appendChild(ifrm);
 }
